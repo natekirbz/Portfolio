@@ -1,0 +1,61 @@
+#TopBar {
+    height: 70px;
+    width: calc(100vw - 80px);
+    display: flex;
+    justify-content:center;
+}
+#Page {
+    width: auto;
+    height: calc(100vh - 75px);
+    /* border: solid; */
+}
+
+button {
+    /* transform: rotate(-90deg); */
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+    font-family: "papyrus", fantasy;
+    font-size: larger;
+    padding: 0px 10px 0px 10px;
+}
+
+#homeContent {
+    display: flex;
+    width: auto;
+    height: calc(100vh - 80px);
+    justify-content:center;
+}
+
+#homeLeft {
+    flex-grow: 1;
+    padding: 25px 0 0 75px;
+    font-family: "papyrus", fantasy;
+    font-size: larger;
+}
+#homeLeft > p {
+    margin:0
+}
+
+#homeRight {
+    padding: 10px;
+}
+
+.name {
+    position: relative;
+    background: linear-gradient(135deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+    -webkit-background-clip: text;
+    background-size: 300% 300%;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    font-size: 7em;
+    font-family: "copperplate", fantasy;
+    animation: gradientMove 3s ease infinite;
+}
+
+@keyframes gradientMove {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
