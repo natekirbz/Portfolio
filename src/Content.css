@@ -28,7 +28,7 @@ button {
 }
 
 #homeLeft {
-    flex-grow: 1;
+    width: calc(30vw);
     padding: 25px 0 0 75px;
     font-family: "papyrus", fantasy;
     font-size: larger;
@@ -38,11 +38,15 @@ button {
 }
 
 #homeRight {
-    padding: 10px;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .name {
-    position: relative;
+    height: 7.5rem;
+    line-height: .95;
     background: linear-gradient(135deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
     -webkit-background-clip: text;
     background-size: 300% 300%;
@@ -58,4 +62,17 @@ button {
     0% {background-position: 0% 50%;}
     50% {background-position: 100% 50%;}
     100% {background-position: 0% 50%;}
+}
+
+#bottom{
+    line-height: 0.85;
+}
+
+.photo{
+    height: 30vw;
+    width: 30vw;
+    background-color: #bbb;
+    border-radius: 50%;
+    border: solid;
+    display: inline-block;
 }

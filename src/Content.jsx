@@ -5,13 +5,13 @@ function Home() {
     return (
         <main id="homeContent">
             <section id="homeLeft">
-            <p>Hi, I am</p>
-            <p class="name">Nathan</p>
-            <p class="name">Kirby</p>
-            <p>Full Stack Developer</p>
+                <p>Hi, I am</p>
+                <p class="name" id="top">Nathan</p>
+                <p class="name" id="bottom">Kirby</p>
+                <p>Full Stack Developer</p>
             </section>
             <section id="homeRight">
-            right
+                <span class="photo"></span>
             </section>
             
         </main>
