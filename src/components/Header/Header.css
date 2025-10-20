@@ -1,0 +1,62 @@
+#TopBar {
+    height: 70px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+button {
+    padding: 0.75rem 1.5rem;
+    border: 2px solid transparent;
+    background-color: transparent;
+    font-family: "papyrus", fantasy;
+    font-size: 1.1rem;
+    color: inherit;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+}
+
+button:hover {
+    border-color: #feda75;
+    background: linear-gradient(135deg, rgba(254, 218, 117, 0.1), rgba(250, 126, 30, 0.1), rgba(214, 41, 118, 0.1));
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    #TopBar {
+        height: 60px;
+        gap: 1rem;
+        padding: 0.5rem;
+    }
+    
+    button {
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #TopBar {
+        flex-direction: column;
+        height: auto;
+        gap: 0.5rem;
+        padding: 1rem;
+    }
+    
+    button {
+        width: 100%;
+        max-width: 200px;
+    }
+}

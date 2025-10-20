@@ -1,0 +1,167 @@
+#homeContent {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+    min-height: calc(100vh - 140px);
+}
+
+#homeLeft {
+    flex: 1;
+    max-width: 500px;
+    font-family: "papyrus", fantasy;
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+#homeLeft > p {
+    margin: 0;
+    line-height: 1.2;
+}
+
+#homeLeft > p:first-child {
+    font-size: 1.5rem;
+    margin-bottom: -1rem;
+    color: #888;
+}
+
+#homeLeft > p:last-child {
+    font-size: 1.5rem;
+    margin-top: -4rem;
+    color: #888;
+}
+
+#homeRight {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 500px;
+}
+
+.photo {
+    height: 400px;
+    width: 400px;
+    background-color: #bbb;
+    border-radius: 50%;
+    border: 3px solid rgba(254, 218, 117, 0.3);
+    display: inline-block;
+    background-image: url('/src/assets/headshot.jpg');
+    background-size: cover;
+    background-position: center top;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.name {
+    height: auto;
+    min-height: 7.5rem;
+    line-height: 0.3;
+    background: linear-gradient(135deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+    -webkit-background-clip: text;
+    background-size: 300% 300%;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    font-size: 7em;
+    font-family: "copperplate", fantasy;
+    animation: gradientMove 3s ease infinite;
+    margin: -0.5rem 0;
+    padding: 0;
+    overflow: visible;
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+#bottom {
+    line-height: 0.3;
+    margin-top: -1.5em;
+    position: relative;
+    top: -0.35em;
+}
+
+/* Tablet responsiveness */
+@media (max-width: 1024px) {
+    #homeContent {
+        gap: 1.5rem;
+        padding: 1.5rem;
+    }
+    
+    .name {
+        font-size: 5em;
+        min-height: 5.5rem;
+    }
+    
+    .photo {
+        height: 350px;
+        width: 350px;
+    }
+
+    #homeLeft > p:last-child {
+        margin-top: -3rem;
+    }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    #homeContent {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+        padding: 1rem;
+    }
+    
+    #homeLeft {
+        max-width: 100%;
+        padding: 1rem;
+    }
+    
+    .name {
+        font-size: 4em;
+        min-height: 4.5rem;
+    }
+    
+    .photo {
+        height: 300px;
+        width: 300px;
+    }
+    #homeLeft > p:last-child {
+        margin-top: -2.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #homeLeft {
+        font-size: 1rem;
+    }
+    
+    #homeLeft > p:first-child {
+        font-size: 1.2rem;
+    }
+    
+    #homeLeft > p:last-child {
+        font-size: 1.1rem;
+        margin-top: -1.3rem;
+    }
+    
+    .name {
+        font-size: 3em;
+        min-height: 3.5rem;
+    }
+    
+    .photo {
+        height: 250px;
+        width: 250px;
+    }
+}
